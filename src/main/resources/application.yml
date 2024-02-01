@@ -1,0 +1,17 @@
+micronaut:
+  application:
+    name: vehicle-service
+datasources:
+  default:
+    url: jdbc:postgresql://localhost:5432/vehicle
+    username: postgres
+    password: postgres
+    driverClassName: org.postgresql.Driver
+    dialect: POSTGRES
+    schema-generate: CREATE_DROP
+jpa:
+  default:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update

@@ -3,15 +3,22 @@ micronaut:
     name: vehicle-service
 datasources:
   default:
-    url: jdbc:postgresql://localhost:5432/vehicle
+    url: jdbc:postgresql://0.0.0.0:5432/vehicle-service-db
     username: postgres
     password: postgres
-    driverClassName: org.postgresql.Driver
+    driver-class-name: org.postgresql.Driver
     dialect: POSTGRES
-    schema-generate: CREATE_DROP
+    schema-generate: NONE
 jpa:
   default:
+    entity-scan:
+      packages:
+        - 'dev.da0hn.course.micronaut.model'
     properties:
       hibernate:
         hbm2ddl:
           auto: update
+        show_sql: true
+        format_sql: true
+    packages-to-scan:
+      - 'dev.da0hn.course.micronaut'

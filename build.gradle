@@ -32,6 +32,7 @@ dependencies {
   runtimeOnly("ch.qos.logback:logback-classic:1.4.14")
   runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin:2.15.3")
   runtimeOnly("org.postgresql:postgresql:42.5.4")
+  implementation("io.micronaut.discovery:micronaut-discovery-client:4.0.1")
   testImplementation("io.micronaut:micronaut-http-client:4.0.1")
   annotationProcessor("io.micronaut.serde:micronaut-serde-processor:2.1.0")
 }

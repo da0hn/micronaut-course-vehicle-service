@@ -22,3 +22,8 @@ jpa:
         format_sql: true
     packages-to-scan:
       - 'dev.da0hn.course.micronaut'
+consul:
+  client:
+    registration:
+      enabled: true
+    defaultZone: "localhost:8500"
